@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion"; // Import Framer Motion
+import { motion } from "framer-motion";
 import { PROJECTS } from "../../constants";
 
 // Animation Variants
@@ -29,7 +29,7 @@ const hoverEffect = {
 const Projects = () => {
   return (
     <motion.div
-      className="border-b border-neutral-900 pb-4"
+      className="border-b border-neutral-900 pb-12 px-4 lg:px-16"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
@@ -40,7 +40,7 @@ const Projects = () => {
     >
       {/* Title */}
       <motion.h1
-        className="my-20 text-4xl text-center"
+        className="my-10 text-4xl font-bold text-center text-neutral-200"
         variants={fadeIn("down", 0.1)}
         whileHover={{
           scale: 1.1,
@@ -52,16 +52,16 @@ const Projects = () => {
       </motion.h1>
 
       {/* Project List */}
-      <div>
+      <div className="flex flex-col gap-12">
         {PROJECTS.map((project, index) => (
           <motion.div
             key={index}
-            className="mb-8 flex flex-wrap lg:justify-center"
-            variants={fadeIn("up", index * 0.2)} // Staggered animations
+            className="flex flex-col items-center  lg:flex-row lg:items-start lg:text-left"
+            variants={fadeIn("up", index * 0.2)}
           >
             {/* Project Image */}
             <motion.div
-              className="w-full lg:w-1/4"
+              className=" lg:w-1/4 mb-6 lg:mb-0 lg:mr-8"
               whileHover={hoverEffect.hover}
             >
               <img
@@ -69,14 +69,14 @@ const Projects = () => {
                 width={150}
                 height={150}
                 alt={project.title}
-                className="mb-6 rounded"
+                className="rounded-lg shadow-lg"
               />
             </motion.div>
 
             {/* Project Details */}
-            <div className="w-full max-w-xl lg:w-3/4">
+            <div className="w-full max-w-xl">
               <motion.h5
-                className="mb-2 font-semibold"
+                className="mb-2 text-xl font-semibold text-neutral-100"
                 variants={fadeIn("right", 0.3)}
               >
                 {project.title}
@@ -90,7 +90,7 @@ const Projects = () => {
 
               {/* Technologies Tags */}
               <motion.div
-                className="flex flex-wrap"
+                className="flex flex-wrap justify-center gap-2 lg:justify-start"
                 initial="hidden"
                 animate="visible"
                 variants={{
@@ -105,7 +105,7 @@ const Projects = () => {
                 {project.technologies.map((tech, techIndex) => (
                   <motion.span
                     key={techIndex}
-                    className="mr-2 rounded bg-neutral-900 px-2 p-1 text-sm font-medium text-purple-900"
+                    className="rounded bg-neutral-800 px-3 py-1 text-sm font-medium text-purple-200 shadow-sm"
                     variants={{
                       hidden: { opacity: 0, y: 10 },
                       visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
