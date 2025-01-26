@@ -40,11 +40,11 @@ const Experience = () => {
         {EXPERIENCES.map((experience, index) => (
           <motion.div
             key={index}
-            className="mb-8 flex flex-wrap lg:justify-center"
+            className="mb-8 justify-center text-center lg:text-left flex flex-wrap lg:justify-center"
             variants={childVariants}
           >
             {/* Year Section */}
-            <div className="w-full lg:w-1/4">
+            <div className="w-full text-center lg:w-1/4 lg:text-left">
               <p className="mb-2 text-sm text-neutral-500">{experience.year}</p>
             </div>
 
@@ -59,7 +59,7 @@ const Experience = () => {
               <p className="mb-4 text-neutral-400">{experience.description}</p>
 
               {/* Technologies Tags */}
-              <div className="flex flex-wrap">
+              <div className="flex flex-wrap justify-center lg:justify-start">
                 {experience.technologies.map((tech, techIndex) => (
                   <motion.span
                     key={techIndex}
