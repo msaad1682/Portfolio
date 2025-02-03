@@ -1,5 +1,4 @@
 import Navbar from "./assets/Components/Navbar"
-import About from "./assets/Components/About"
 import Hero from "./assets/Components/Hero"
 import Technologies from "./assets/Components/Technologies"
 import Experience from "./assets/Components/Experience"
@@ -16,7 +15,6 @@ const App = () => {
 
       <Navbar />
       <Hero />
-      {/* <About /> */}
       <Technologies />
       <Experience />
       <Projects />
