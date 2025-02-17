@@ -3,7 +3,7 @@ import { HERO_CONTENT } from '../../constants'; // Ensure HERO_CONTENT is define
 // import profile from '../../assets/KevinRushProfile.jpg';
 import { motion } from "framer-motion"; // Correct import
 
-import profile from "../../assets/kevinRushProfile.jpg";
+import profile from "../../assets/saad.jpeg";
 
 const container = (delay) => ({
   hidden: { x: -100, opacity: 0 },
