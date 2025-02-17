@@ -2,9 +2,9 @@ import React from "react";
 import { motion } from "framer-motion"; // Import Framer Motion
 import { RiReactjsLine } from "react-icons/ri";
 import { TbBrandNextjs } from "react-icons/tb";
-import { SiMongodb } from "react-icons/si";
-import { DiRedis } from "react-icons/di";
-import { FaNodeJs } from "react-icons/fa";
+// import { SiMongodb } from "react-icons/si";
+// import { DiRedis } from "react-icons/di";
+// import { FaNodeJs } from "react-icons/fa";
 import { BiLogoPostgresql } from "react-icons/bi";
 
 // Define animation variants
@@ -56,9 +56,9 @@ const Technologies = () => {
           {[ // List of icons with styling
             { Icon: RiReactjsLine, color: "text-cyan-400" },
             { Icon: TbBrandNextjs, color: "" },
-            { Icon: SiMongodb, color: "text-green-700" },
-            { Icon: DiRedis, color: "text-red-900" },
-            { Icon: FaNodeJs, color: "text-green-600" },
+            // { Icon: SiMongodb, color: "text-green-700" },
+            // { Icon: DiRedis, color: "text-red-900" },
+            // { Icon: FaNodeJs, color: "text-green-600" },
             { Icon: BiLogoPostgresql, color: "text-sky-800" },
           ].map(({ Icon, color }, index) => (
             <motion.div

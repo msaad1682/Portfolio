@@ -70,6 +70,6 @@ export const PROJECTS = [
 
 export const CONTACT = {
   address: "Lahore",
-  phoneNo: "+923211682070 ",
+  phoneNo: "+923120882711 ",
   email: "msaadiftikhar67@gmail.com",
 };
